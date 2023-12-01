@@ -1,5 +1,5 @@
 # Advent_of_code_2023
-My solutions to 2023 advent of code problems.
+My solutions to 2023 advent of code problems (https://adventofcode.com)
 
 ## Automation:
 1. Download your input using function download_input from get_input.py file.
