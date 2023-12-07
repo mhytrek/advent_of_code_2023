@@ -1,0 +1,43 @@
+import get_input
+
+example = ["Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53",
+"Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19",
+"Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1",
+"Card 4: 41 92 73 84 69 | 59 84 76 51 58  5 54 83",
+"Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36",
+"Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11",]
+
+def card_won(line,i):
+    if line[-1]=="\n":
+        line = line[:-1]
+    card, num = line.split(":")
+    num1, num2 = num.split("|")
+    win_num = num1.split(" ")[1:-1]
+    my_num = num2.split(" ")[1:]
+
+
+    d={}
+    cards = []
+    for n in win_num:
+        if n.isnumeric():
+            d[n] = 1
+    for n2 in my_num:
+        if d.get(n2) != None:
+            i+=1
+            cards.append(i)
+    return cards
+
+def cards_worth(lines):
+    s = 0
+    multi = [1 for _ in range(len(lines))]
+    for j in range(len(lines)):
+        cards = card_won(lines[j],j+1)
+        for i in cards:
+            multi[i-1] += (1*multi[j])
+    for n in multi:
+        s += n
+    return s
+
+if __name__ == '__main__':
+    lines = get_input.download_input(4)
+    print(cards_worth(lines))
