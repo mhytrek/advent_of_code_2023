@@ -2,9 +2,9 @@
 My solutions to 2023 [advent of code problems](https://adventofcode.com)
 
 ## Finished Problems
-16/25
+![64%](https://progress-bar.dev/64)
 
-## Automations: ~~ in progress :racing_car:
+## Automation: ~~ in progress :racing_car:
 ### First:
    To use, you need to:
    - copy and paste your value of cookies (SESSION_ID) and user agent (USER_AGENT) to the file get_input.py
