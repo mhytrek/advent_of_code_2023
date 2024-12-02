@@ -43,6 +43,7 @@ def check_diff_2(data):
     return safe
 
 
+
 def main():
     file = open("input_day_2", "r")
     lines = file.readlines()
