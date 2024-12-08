@@ -1,6 +1,4 @@
-from math import log10
-
-from adventofcode import get_input
+import Input_helper
 
 def parse(data):
     data = [[r.replace("\n", "").split(" ") for r in line.split(": ")] for line in data]

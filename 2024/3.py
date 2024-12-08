@@ -1,4 +1,4 @@
-from adventofcode import get_input
+import Input_helper
 import re
 
 

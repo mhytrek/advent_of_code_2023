@@ -1,5 +1,5 @@
 from enum import Enum
-from adventofcode import get_input
+import Input_helper
 
 class Direction(Enum):
     UP = (-1,0)
@@ -12,7 +12,7 @@ class Direction(Enum):
         return directions[(directions.index(self) + 1) % len(directions)]
 
 
-class Quard:
+class Guard:
     def __init__(self, x, y, direction, board_x, board_y, table):
         self.x = x
         self.y = y
@@ -60,7 +60,7 @@ def simulation(data):
     x_len, y_len = len(board), len(board[0])
 
     x,y = find_guard(board)
-    guard = Quard(x, y, Direction.UP, x_len, y_len, board)
+    guard = Guard(x, y, Direction.UP, x_len, y_len, board)
 
     while guard.in_board(guard.x, guard.y):
         guard.count_field()

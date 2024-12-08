@@ -1,4 +1,4 @@
-from adventofcode import get_input
+import Input_helper
 
 def parse_data(lines):
     data_1 = [line.replace('\n', '').split("|") for line in lines]

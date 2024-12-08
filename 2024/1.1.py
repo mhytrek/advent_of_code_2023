@@ -1,4 +1,4 @@
-from adventofcode import get_input
+import Input_helper
 
 def get_data(lines):
     data = [list(map(int, a.replace("\n", "").split("   "))) for a in lines]
@@ -30,4 +30,5 @@ def main():
 if __name__ == "__main__":
     print(get_input.get_input(1))
     print(get_input.get_example(1))
+    print(get_input.check_example(1,1,11))
 
